@@ -37,6 +37,7 @@ button:hover {
 }
 
 .input-text {
+    margin-top: 1rem;
     padding: 10px;
     width: 100%;
     background-color: rgba(250,250,250,0.5);
@@ -46,6 +47,7 @@ button:hover {
 }
 
 .dropdown {
+    margin-top: 1rem;
     padding: 10px;
     width: 100%;
     background-color: rgba(250,250,250,0.5);
