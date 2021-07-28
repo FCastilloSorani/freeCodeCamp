@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">¡Danos tu opinion!</h1>
+            <p id="description">
+                Contanos sobre tu experiencia utilizando nuestros servicios :)
+            </p>
+        </header>
+
+        <form id="survey-form">
+            <div>
+                <label id="name-label" for="name">Nombre y apellido</label>
+                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre y apellido" required>
+            </div>
+            <div>
+                <label id="email-label" for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div>
+                <label id="number-label" for="number">Edad</label>
+                <input type="number" id="number" name="number" placeholder="Ingresa tu edad" min="0" max="120" required>
+            </div>
+            <div>
+                <label for="dropdown-label">Tu calificación en general</label>
+                <select name="dropdown" id="dropdown" required>
+                    <option value="Excelente">Excelente</option>
+                    <option value="Buena">Buena</option>
+                    <option value="Regular" selected>Regular</option>
+                    <option value="Mala">Mala</option>
+                    <option value="Pésima">Pésima</option>
+                </select>
+            </div>
+            <div>
+                <p>Servicio que utilizaste</p>
+                <label><input type="radio" name="radio" value="encomiendas" requierd>Encomiendas</label>
+                <label><input type="radio" name="radio" value="correo" required>Envío de cartas</label>
+                <label> <input type="radio" name="radio" value="viajes" required>Viajes</label>
+            </div>
+            <div>
+                <p>Lo que más te gustó de nuestros servicios</p>
+                <label><input type="checkbox" name="checkbox" value="velocidad">Velocidad de envío</label>
+                <label><input type="checkbox" name="checkbox" value="atencion">Atención</label>
+                <label><input type="checkbox" name="checkbox" value="seguridad">Seguridad</label>
+                <label><input type="checkbox" name="checkbox" value="otro"></label>
+                <textarea name="textarea" id="textarea" cols="30" rows="10" maxlength="150"></textarea>
+            </div>
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
