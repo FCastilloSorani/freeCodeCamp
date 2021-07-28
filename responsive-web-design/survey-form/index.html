@@ -10,30 +10,30 @@
 </head>
 
 <body>
-    <div class="container">
+    <div>
         <header class="header">
-            <h1 id="title">¡Danos tu opinion!</h1>
+            <h1 id="title">¡Danos tu opinión!</h1>
             <p id="description">
-                Contanos sobre tu experiencia utilizando nuestros servicios :)
+                😀 Contanos sobre tu experiencia utilizando nuestros servicios para que podamos mejorar 😀
             </p>
         </header>
 
-        <form id="survey-form">
-            <div>
+        <form class="container" id="survey-form">
+            <div class="form-control">
                 <label id="name-label" for="name">Nombre y apellido</label>
-                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre y apellido" required>
+                <input class="input-text" type="text" name="name" id="name" placeholder="Ingresa tu nombre y apellido" required>
             </div>
-            <div>
+            <div class="form-control">
                 <label id="email-label" for="email">Correo electrónico</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+                <input class="input-text" type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico" required>
             </div>
-            <div>
+            <div class="form-control">
                 <label id="number-label" for="number">Edad</label>
-                <input type="number" id="number" name="number" placeholder="Ingresa tu edad" min="0" max="120" required>
+                <input class="input-text" type="number" id="number" name="number" placeholder="Ingresa tu edad" min="0" max="120" required>
             </div>
-            <div>
+            <div class="form-control">
                 <label for="dropdown-label">Tu calificación en general</label>
-                <select name="dropdown" id="dropdown" required>
+                <select class="dropdown" name="dropdown" id="dropdown" required>
                     <option value="Excelente">Excelente</option>
                     <option value="Buena">Buena</option>
                     <option value="Regular" selected>Regular</option>
@@ -41,21 +41,25 @@
                     <option value="Pésima">Pésima</option>
                 </select>
             </div>
-            <div>
+            <div class="form-control buttons">
                 <p>Servicio que utilizaste</p>
                 <label><input type="radio" name="radio" value="encomiendas" requierd>Encomiendas</label>
                 <label><input type="radio" name="radio" value="correo" required>Envío de cartas</label>
                 <label> <input type="radio" name="radio" value="viajes" required>Viajes</label>
             </div>
-            <div>
+            <div class="form-control buttons">
                 <p>Lo que más te gustó de nuestros servicios</p>
                 <label><input type="checkbox" name="checkbox" value="velocidad">Velocidad de envío</label>
                 <label><input type="checkbox" name="checkbox" value="atencion">Atención</label>
                 <label><input type="checkbox" name="checkbox" value="seguridad">Seguridad</label>
-                <label><input type="checkbox" name="checkbox" value="otro"></label>
+            </div>
+            <div class="form-control">
+                <p>Comentarios</p>
                 <textarea name="textarea" id="textarea" cols="30" rows="10" maxlength="150"></textarea>
             </div>
-            <button id="submit" type="submit">Enviar</button>
+            <div style="text-align: center;">
+                <button id="submit" type="submit">Enviar</button>
+            </div>
         </form>
     </div>
 
