@@ -77,10 +77,32 @@ code#code {
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
+    font-size: 0.8rem;
 }
 
 .list {
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+}
+
+@media (max-width: 460px) {
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        border-bottom-style: solid;
+        border-bottom-color: #777;
+    }
+    .nav-link {
+        text-align: center;
+    }
 }
