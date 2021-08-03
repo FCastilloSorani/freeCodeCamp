@@ -1,13 +1,15 @@
 body {
     margin: 0;
     font-size: 10px;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 20% auto;
 }
 
 .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 20%;
     background-color: #f1f1f1;
     height: 100%;
     position: fixed;
@@ -35,9 +37,12 @@ img#logo {
 }
 
 main {
-    margin-left: 20%;
-    padding: 10px 16px 10px 16px;
+    padding: 10px 25px 10px 25px;
     height: 1000px;
+}
+
+section {
+    margin: 1.5rem 0 3rem 0;
 }
 
 header {
@@ -52,10 +57,26 @@ p {
     font-size: 0.9rem;
 }
 
-code {
+.inline-code {
     color: crimson;
     background-color: #f1f1f1;
     padding: 2px;
+    font-size: 0.8rem;
+}
+
+code#code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 .list {

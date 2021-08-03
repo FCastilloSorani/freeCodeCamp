@@ -55,11 +55,13 @@
                 consists of a diverse group of over 1.7 million developers, library authors, and content creators.
             </p>
         </section>
+        <hr>
         <section id="Components" class="main-section">
             <header>Components</header>
             <p>
                 Components are the building blocks that compose an application. A component includes a TypeScript class
-                with a <code>@Component()</code> decorator, an HTML template, and styles. The <code>@Component()</code>
+                with a <code class="inline-code">@Component()</code> decorator, an HTML template, and styles. The
+                <code>@Component()</code>
                 decorator specifies the following Angular-specific information:
             </p>
             <ul class="list">
@@ -68,7 +70,20 @@
                 <li>A CSS selector that defines how the component is used in a template</li>
                 <li>Optionally, CSS styles applied to the template</li>
             </ul>
+            <p>
+                The following is a minimal Angular component.
+            </p>
+            <code id="code">import { Component } from '@angular/core';
+                @Component({
+                    selector: 'hello-world',
+                    template: ``,
+                })
+                export class HelloWorldComponent {
+                    // The code in this class drives the component's behavior.
+                }
+            </code>
         </section>
+        <hr>
         <section id="Templates" class="main-section">
             <header>Templates</header>
             <p>
@@ -81,16 +96,19 @@
                 regular HTML, but with a lot more functionality.
             </p>
             <p>
-                When you generate an Angular application with the Angular CLI, the <code>app.component.html</code> file
+                When you generate an Angular application with the Angular CLI, the <code
+                    class="inline-code">app.component.html</code> file
                 is the
                 default template containing placeholder HTML.
             </p>
             <p>
                 To eliminate the risk of script injection attacks, Angular does not support the
-                <code>script</code> element in templates.Angular ignores the <code>script</code> tag and outputs a
+                <code class="inline-code">script</code> element in templates.Angular ignores the <code
+                    class="inline-code">script</code> tag and outputs a
                 warning to the browser console.
             </p>
         </section>
+        <hr>
         <section id="Transforming_Data_Using_Pipes" class="main-section">
             <header>Transforming Data Using Pipes</header>
             <p>
@@ -105,15 +123,18 @@
                 used built-in pipes for data formatting:
             </p>
             <ul class="list">
-                <li><code>DatePipe</code>: Formats a date value according to locale rules.</li>
-                <li><code>UpperCasePipe</code>: Transforms text to all upper case.</li>
-                <li><code>LowerCasePipe</code>: Transforms text to all lower case.</li>
-                <li><code>CurrencyPipe</code>: Transforms a number to a currency string, formatted according to locale
-                    rules.</li>
-                <li><code>DecimalPipe</code>: Transforms a number into a string with a decimal point, formatted
+                <li><code class="inline-code">DatePipe</code>: Formats a date value according to locale rules.</li>
+                <li><code class="inline-code">UpperCasePipe</code>: Transforms text to all upper case.</li>
+                <li><code class="inline-code">LowerCasePipe</code>: Transforms text to all lower case.</li>
+                <li><code class="inline-code">CurrencyPipe</code>: Transforms a number to a currency string, formatted
                     according to locale
                     rules.</li>
-                <li><code>PercentPipe</code>: Transforms a number to a percentage string, formatted according to locale
+                <li><code class="inline-code">DecimalPipe</code>: Transforms a number into a string with a decimal
+                    point, formatted
+                    according to locale
+                    rules.</li>
+                <li><code class="inline-code">PercentPipe</code>: Transforms a number to a percentage string, formatted
+                    according to locale
                     rules.</li>
             </ul>
             <p>
@@ -121,7 +142,7 @@
                     API documentation</a>.
             </p>
         </section>
-        </ul>
+        <hr>
         <section id="Directives" class="main-section">
             <header>Directives</header>
             <p>
@@ -143,12 +164,24 @@
                 </li>
             </ol>
         </section>
+        <hr>
         <section id="Reference" class="main-section">
             <header>Reference</header>
-            <p>All the documentation in this page is taken from <a href="https://angular.io/docs">Angular Docs</a>.</p>
+            <p style="padding-bottom:3rem;">All the documentation in this page is taken from <a
+                    href="https://angular.io/docs">Angular Docs</a>.</p>
         </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth', block: "start", inline: "center"
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
