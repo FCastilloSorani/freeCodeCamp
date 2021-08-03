@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="navbar">
+            <header style="background-color: #555;">
+                <a href="https://angular.io/">
+                    <img id="logo" src="./images/logo.png" alt="Angular logo">
+                </a>
+            </header>
+            <li><a class="nav-link" href="#What_is_angular">What is Angular</a></li>
+            <li><a class="nav-link" href="#Components">Components</a></li>
+            <li><a class="nav-link" href="#Templates">Templates</a></li>
+            <li><a class="nav-link" href="#Transforming_Data_Using_Pipes">Transforming Data Using Pipes</a></li>
+            <li><a class="nav-link" href="#Directives">Directives</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="What_is_angular" class="main-section">
+            <header>What is Angular</header>
+            <p>
+                This topic can help you understand Angular: what Angular is, what advantages it provides, and what you
+                might expect as you start to build your applications.
+            </p>
+            <p>
+                Angular is a development platform, built on <a href="https://www.typescriptlang.org/">TypeScript</a>. As
+                a platform, Angular includes:
+            </p>
+            <ul class="list">
+                <li>A component-based framework for building scalable web applications</li>
+                <li>A collection of well-integrated libraries that cover a wide variety of features, including routing,
+                    forms management, client-server communication, and more</li>
+                <li>A suite of developer tools to help you develop, build, test, and update your code</li>
+            </ul>
+            <p>
+                With Angular, you're taking advantage of a platform that can scale from single-developer projects to
+                enterprise-level applications. Angular is designed to make updating as straightforward as possible, so
+                take advantage of the latest developments with a minimum of effort. Best of all, the Angular ecosystem
+                consists of a diverse group of over 1.7 million developers, library authors, and content creators.
+            </p>
+        </section>
+        <section id="Components" class="main-section">
+            <header>Components</header>
+            <p>
+                Components are the building blocks that compose an application. A component includes a TypeScript class
+                with a <code>@Component()</code> decorator, an HTML template, and styles. The <code>@Component()</code>
+                decorator specifies the following Angular-specific information:
+            </p>
+            <ul class="list">
+                <li>An HTML template that declares what renders on the page</li>
+                <li>A Typescript class that defines behavior</li>
+                <li>A CSS selector that defines how the component is used in a template</li>
+                <li>Optionally, CSS styles applied to the template</li>
+            </ul>
+        </section>
+        <section id="Templates" class="main-section">
+            <header>Templates</header>
+            <p>
+                In Angular, a template is a chunk of HTML. Use special syntax within a template to build on many of
+                Angular's features.
+            </p>
+            <p>
+                Each Angular template in your application is a section of HTML to include as a part of the page that the
+                browser displays. An Angular HTML template renders a view, or user interface, in the browser, just like
+                regular HTML, but with a lot more functionality.
+            </p>
+            <p>
+                When you generate an Angular application with the Angular CLI, the <code>app.component.html</code> file
+                is the
+                default template containing placeholder HTML.
+            </p>
+            <p>
+                To eliminate the risk of script injection attacks, Angular does not support the
+                <code>script</code> element in templates.Angular ignores the <code>script</code> tag and outputs a
+                warning to the browser console.
+            </p>
+        </section>
+        <section id="Transforming_Data_Using_Pipes" class="main-section">
+            <header>Transforming Data Using Pipes</header>
+            <p>
+                Use pipes to transform strings, currency amounts, dates, and other data for display. Pipes are simple
+                functions to use in template expressions to accept an input value and return a transformed value. Pipes
+                are useful because you can use them throughout your application, while only declaring each pipe once.
+                For example, you would use a pipe to show a date as April 15, 1988 rather than the raw string format.
+            </p>
+            <p>
+                Angular provides built-in pipes for typical data transformations, including transformations for
+                internationalization (i18n), which use locale information to format data. The following are commonly
+                used built-in pipes for data formatting:
+            </p>
+            <ul class="list">
+                <li><code>DatePipe</code>: Formats a date value according to locale rules.</li>
+                <li><code>UpperCasePipe</code>: Transforms text to all upper case.</li>
+                <li><code>LowerCasePipe</code>: Transforms text to all lower case.</li>
+                <li><code>CurrencyPipe</code>: Transforms a number to a currency string, formatted according to locale
+                    rules.</li>
+                <li><code>DecimalPipe</code>: Transforms a number into a string with a decimal point, formatted
+                    according to locale
+                    rules.</li>
+                <li><code>PercentPipe</code>: Transforms a number to a percentage string, formatted according to locale
+                    rules.</li>
+            </ul>
+            <p>
+                For a complete list of built-in pipes, see the <a href="https://angular.io/api/common#pipes">pipes
+                    API documentation</a>.
+            </p>
+        </section>
+        </ul>
+        <section id="Directives" class="main-section">
+            <header>Directives</header>
+            <p>
+                Directives are classes that add additional behavior to elements in your Angular applications. With
+                Angular's built-in directives, you can manage forms, lists, styles, and what users see.
+            </p>
+            <p>
+                The different types of Angular directives are as follows:
+            </p>
+            <ol class="list">
+                <li>Components — directives with a template. This type of directive is the most common
+                    directive type.
+                </li>
+                <li>Attribute directives — directives that change the appearance or behavior of an
+                    element, component, or
+                    another directive.</li>
+                <li>Structural directives — directives that change the DOM layout by adding and
+                    removing DOM elements.
+                </li>
+            </ol>
+        </section>
+        <section id="Reference" class="main-section">
+            <header>Reference</header>
+            <p>All the documentation in this page is taken from <a href="https://angular.io/docs">Angular Docs</a>.</p>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
