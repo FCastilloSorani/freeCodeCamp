@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-link" href="#contact">Contacto</a></li>
+            <li class="nav-li"><a class="nav-link" href="#projects">Proyectos</a></li>
+        </ul>
+    </nav>
+    <div id="welcome-section" class="welcome-section">
+        <h1>¡Hola!</h1>
+        <h1>Soy Fernando.</h1>
+        </h1>
+        <h3>Desarrollador web Full Stack</h3>
+    </div>
+    <section id="projects" class="projects">
+        <div class="projects-intro">
+            <span>Algunos de mis proyectos...</span>
+        </div>
+        <div class="project-tile">
+            <a href="https://codepen.io/FeerGz/pen/BaRxzOP" target="_blank" rel="noopener noreferrer">
+                <img class="project-image" src="./images/landing-page-screenshot.png" alt="Landing Page project image">
+                <h1 class="project-name">Landing Page</h1>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="https://codepen.io/FeerGz/pen/YzVegMv" target="_blank" rel="noopener noreferrer">
+                <img class="project-image" src="./images/survey-screenshot.png" alt="Survey Form project image">
+                <h1 class="project-name">Survey Form</h1>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="https://codepen.io/FeerGz/pen/rNmrgNL" target="_blank" rel="noopener noreferrer">
+                <img src="./images/technical-doc-screenshot.png" alt="Technical Documentation project image"
+                    class="project-image">
+                <h1 class="project-name">Technical Documentation</h1>
+            </a>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <a href="http://https://www.linkedin.com/in/fernando-gabriel-castillo-sorani/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.freecodecamp.org/fcastillosorani" target="_blank"
+            rel="noopener noreferrer">freeCodeCamp</a>
+        <a id="profile-link" href="https://github.com/FeerGz" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </section>
+    <footer>
+        <p>Este es un portfolio falso solamente realizado para el challenge de Responsive Web Design de freeCodeCamp.
+        </p>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth', block: "start", inline: "center"
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
