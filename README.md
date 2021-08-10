@@ -6,3 +6,11 @@ My solutions for the challenges of FCC to obtain the certifications of:
   * Responsive Web Design Principles
   * Applied Visual Design
   * Applied Accessibility
+* [JavaScript Algorithms and Data Structures Certification](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/):
+  * Basic JavaScript
+  * ES6
+  * Regular Expressions
+  * Data Structures
+  * Object Oriented Programming
+  * Functional Programming
+  * Algorithm Scripting
