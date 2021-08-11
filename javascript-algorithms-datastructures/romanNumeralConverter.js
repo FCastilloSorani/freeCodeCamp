@@ -16,9 +16,9 @@ function convertToRoman(num) {
         return num.toString().length;
     }
 
-    let TENS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
-    let HUNDREDS = ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
-    let THOUSANDS = ["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "M"];
+    const TENS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const HUNDREDS = ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+    const THOUSANDS = ["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "M"];
 
     let res = [];
     let decomposed = decompose(num);
@@ -46,4 +46,4 @@ function convertToRoman(num) {
     return res.join('');
 }
 
-convertToRoman(5000);
+console.log(convertToRoman(3987)) // MMMCMLXXXVII
