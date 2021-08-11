@@ -11,9 +11,9 @@ function rot13(str) {
   
     let char = str.split('');
     let res = [];
+    let regex = /\W/;
   
     for (let i = 0; i < char.length; i++) {
-      let regex = /\W/;
       if(regex.test(char[i])) {
         res.push(char[i])
       }
