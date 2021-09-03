@@ -1,6 +1,7 @@
 {
 	"name": "fcc-learn-npm-package-json",
 	"author": "Fernando Gabriel Castillo Sorani",
+	"description": "Back End Development and APIs FCC Challenge",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
@@ -10,6 +11,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://idontknow/todo.git"
+		"url": "https://github.com/FCastilloSorani/freeCodeCamp/tree/main/backend-APIs"
 	}
 }
