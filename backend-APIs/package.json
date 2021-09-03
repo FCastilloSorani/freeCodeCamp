@@ -3,6 +3,7 @@
 	"author": "Fernando Gabriel Castillo Sorani",
 	"description": "Back End Development and APIs FCC Challenge",
 	"keywords": ["freecodecamp","back-end","nodejs","express","mongodb"],
+	"license": "MIT",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
