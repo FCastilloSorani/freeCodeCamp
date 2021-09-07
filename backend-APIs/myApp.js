@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
   res.sendFile(absolutePath);
 });
 
+// Uso de .env
 app.get("/json", (req, res) => {
   if (process.env.MESSAGE_STYLE == "uppercase") {
     res.json({ message: "HELLO JSON" });
@@ -26,5 +27,17 @@ app.get("/json", (req, res) => {
     res.json({ message: "Hello json" });
   }
 });
+
+// Chained middleware
+app.get(
+  '/now',
+  (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+  },
+  (req, res) => {
+    res.json({ time: req.time })
+  }
+);
 
 module.exports = app;
