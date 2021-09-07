@@ -1,64 +1,30 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 
-// Static assets. Middleware
+// Middlewares
+// Static assets
 app.use("/public", express.static(__dirname + "/public"));
+
+//Logging
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
+  next();
+});
 
 // Routes
 // Enviar archivo cuando alguien accede a /
-let absolutePath = __dirname + '/views/index.html';
+let absolutePath = __dirname + "/views/index.html";
 
-app.get(
-    '/',
-    (req,res) => {
-        res.sendFile(absolutePath);
-    }
-);
+app.get("/", (req, res) => {
+  res.sendFile(absolutePath);
+});
 
-app.get(
-  '/json',
-  (req,res) => {
-      if (process.env.MESSAGE_STYLE === 'uppercase') {
-        res.json({"message": "Hello json"});
-      } else {
-        res.json({"message": "HELLO JSON"});
-      }
-  }  
-);
+app.get("/json", (req, res) => {
+  if (process.env.MESSAGE_STYLE == "uppercase") {
+    res.json({ message: "HELLO JSON" });
+  } else {
+    res.json({ message: "Hello json" });
+  }
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- module.exports = app;
+module.exports = app;
