@@ -1,14 +1,10 @@
 var express = require('express');
 var app = express();
 
-// Cuando alguien accede a /, se envía el objeto respuesta "Hello Express"
-/* app.get(
-    '/',
-    function(req,res){
-        res.send("Hello Express");
-    }
-); */
+// Static assets. Middleware
+app.use("/public", express.static(__dirname + "/public"));
 
+// Routes
 // Enviar archivo cuando alguien accede a /
 let absolutePath = __dirname + '/views/index.html';
 
@@ -19,8 +15,17 @@ app.get(
     }
 );
 
-// Static assets. Middleware
-app.use("/public", express.static(__dirname + "/public"));
+let json = {
+    "message": "Hello json"
+};
+
+app.get(
+  '/json',
+  (req,res) => {
+      res.json(json);
+  }  
+);
+
 
 
 
