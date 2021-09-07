@@ -1,7 +1,13 @@
 var express = require('express');
 var app = express();
 
-console.log("Hello world");
+// Cuando alguien accede a /, se envía el objeto respuesta "Hello Express"
+app.get(
+    '/',
+    function(req,res){
+        res.send("Hello Express");
+    }
+);
 
 
 
