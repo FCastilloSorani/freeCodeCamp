@@ -21,8 +21,3 @@ app.use(express.static("public"));
 var listener = app.listen(PORT, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/views/index.html");
-});
