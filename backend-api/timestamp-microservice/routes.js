@@ -3,9 +3,8 @@ module.exports = (app) => {
     res.sendFile(__dirname + "/views/index.html");
   });
 
-  function isNumber(input) {
-    /* return isNaN(Number(input)) ? false : true; */
-    return input == Number(input) ? true : false;
+  function isValidUnix(input) {
+    return /\d{5,}/.test(input) ? true : false;
   }
 
   function isValidDate(input) {
@@ -15,20 +14,22 @@ module.exports = (app) => {
 
   app.get("/api/:date", (req, res) => {
     let date = req.params.date;
+    let offset = new Date(date).getTimezoneOffset() * 60 * 1000;
 
-    if (isNumber(date)) {
+    if (isValidUnix(date)) {
       res.send({
-        unix: date,
+        unix: Number(date),
         utc: new Date(Number(date)).toUTCString()
       });
     }
 
-    if(!isNumber(date)) {
+    if(isValidDate(date)){
       res.send({
-        unix: Date.parse(date),
+        unix: Number(Date.parse(date)) ,
         utc: new Date(date).toUTCString()
       });
-    } else {
+    } 
+    if(!isValidDate(date) && !isValidUnix(date)) {
       res.send({
         message: 'Invalid date'
       });

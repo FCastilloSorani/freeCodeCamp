@@ -1,23 +1,19 @@
-// server.js
-// where your node app starts
-
-// init project
+// Init
 var express = require("express");
 var app = express();
 const PORT = 3000;
 
-// Import routes
+// Routes
 require('./routes')(app);
 
-// enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-// so that your API is remotely testable by FCC
+// CORS
 var cors = require("cors");
-app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
+app.use(cors({ optionsSuccessStatus: 200 }));
 
-// http://expressjs.com/en/starter/static-files.html
+// Static files
 app.use(express.static("public"));
 
-// listen for requests :)
+// Listen for requests
 var listener = app.listen(PORT, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
